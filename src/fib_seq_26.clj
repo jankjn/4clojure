@@ -14,3 +14,5 @@
   (if (= cnt 0)
       (seq v)
       (recur b (+ a b) (conj v a) (dec cnt))))
+
+(take 10 (map first (iterate (fn [[a b]] [b (+ a b)]) [1 1])))
